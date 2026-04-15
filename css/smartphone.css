@@ -1,0 +1,57 @@
+@media screen and (max-width: 767px)
+
+{
+
+
+
+#hamburger
+
+{
+
+width: 30px;
+
+height: 30px;
+
+line-height: 30px;
+
+text-align: center;
+z-index: 1001;
+background-color: #000000;
+float: left;
+color: #ffffff;
+}
+li.topitem
+{
+    display: none;
+}
+.header-social-links
+{
+    display: none;
+}
+ul.mobil-topmenu
+{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    padding: 0px;
+    margin: 0;
+    
+    overflow: visible;
+    display: flex !important;
+}
+li.mobil-topitem
+{
+    background-color: #385723;
+    
+    height: 100%;
+    line-height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0 2px;
+    position: relative;
+    display: flex;
+    flex-direction: column;   /* Staplar dem vertikalt */
+    align-items: flex-start;  /* Ser till att de håller sig till vänster */
+    gap: 10px;
+}
+}
