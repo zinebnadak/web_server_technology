@@ -1,65 +1,86 @@
 <!DOCTYPE html>
+<html lang="sv">
 <head>
-<link rel="stylesheet" media="screen and (min-width: 1024px)" href="css.css">
-<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1023px)"href="css.padda.css">
-<link rel="stylesheet" media="screen and (max-width:767)" href="csstelefon.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tricell Laboratories Inc.</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" media="screen and (min-width: 1024px)" href="desktop.css">
+
+    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1023px)" href="tablet.css">
+
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="smartphone.css">
+    
 </head>
 <body>
-    
-
-
+<div class="container">
 <header id ="header-container">
-        <video id="header-video" loop playsinline>
-            <source src="./sounds/redqueen.mp4" type="video/mp4">
-        </video>
-    
-    <div class="emptygreen" >Tricell Laboratories Ink (www.tricell.local)</div>
+        
+        <div class="grid-emptygreen">            
+            Tricell Laboratories Inc (www.tricell.local)
+        </div>
 
-    <div class="grid-breadcrumb">
+        <section class="grid-breadcrumb">
+            <img src="./images/Tricell_logo.png" class="overlay-img" id="img1" alt="Tricell Logo">
 
             <div class="header-social-links">
-                <a href="https://www.facebook.com/tricell" target="_blank" onmouseenter="playHover()"><img src="./images/social_icon_facebook.png" alt="Facebook" class="social-icon"></a>
-                <a href="https://www.instagram.com/tricell" target="_blank" onmouseenter="playHover()"><img src="./images/social_icon_instagram.png" alt="Instagram" class="social-icon"></a>
-                <a href="https://www.linkedin.com/company/tricell" target="_blank" onmouseenter="playHover()"><img src="./images/social_icon_linkedin.png" alt="LinkedIn" class="social-icon"></a>
-                <a href="tel:5551234" onmouseenter="playHover()"><img src="./images/social_icon_phone.png" alt="Phone" class="social-icon"></a>
-                <a href="https://www.snapchat.com/add/tricell" target="_blank" onmouseenter="playHover()"><img src="./images/social_icon_snap.png" alt="Snap" class="social-icon"></a>
-                <a href="https://twitter.com/tricell" target="_blank" onmouseenter="playHover()"><img src="./images/social_icon_twitter.png" alt="Twitter" class="social-icon"></a>
-                <a href="http://intranet.tricell.local" onmouseenter="playHover()"><img src="./images/social_icon_www.png" alt="www" class="social-icon"></a>
+                <a href="https://www.facebook.com/tricell" target="_blank" title="Visit us on Facebook">
+                    <img src="./images/social_icon_facebook.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/tricell" target="_blank" title="Visit us on Instagram">
+                    <img src="./images/social_icon_instagram.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/company/tricell" target="_blank" title="Visit us on LinkedIn">
+                    <img src="./images/social_icon_linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="tel:555456" title="Call us">
+                    <img src="./images/social_icon_phone.png" alt="Phone" class="social-icon">
+                </a>
+                <a href="#" title="Snapchat">
+                    <img src="./images/social_icon_snap.png" alt="Snap" class="social-icon">
+                </a>
+                <a href="#" title="Twitter">
+                    <img src="./images/social_icon_twitter.png" alt="Twitter" class="social-icon">
+                </a>
+                <a href="http://intranet.tricell.local" title="Tricell Intranet">
+                    <img src="./images/social_icon_www.png" alt="www" class="social-icon">
+                </a>
             </div>
-    </div>
-
-    <img src="./images/Tricell_logo.png" class="overlay-img" id="img1">
+        </section>
 </header>
 
-<nav id="topnav">
-    <ul class="topmenu">
-        <li class="topitem"><a href="company_presentation.html" class="dropbtn">Company Presentation</a>
-            <ul class="dropdown-content">
-                <li><a href="pharmaceutical_research.html">1. Pharmaceutical Research</a></li>
-                <li><a href="natural_resources.html">2. Natural Resources</a></li>
-                <li><a href="shipping.html">3. Shipping</a></li>
-            </ul>
-        </li>
-        <li class="topitem"><a href="history.html" class="dropbtn">History</a>
-        </li>
+    <nav id="topnav">
+        <div id="hamburger">&#9776;</div>
+            <ul class="topmenu">           
+                <li class="topitem"><a href="company_presentation.html" class="dropbtn">Company Presentation</a>
+                    <ul class="dropdown-content">
+                        <li><a href="pharmaceutical_research.html">1. Pharmaceutical Research</a></li>
+                        <li><a href="natural_resources.html">2. Natural Resources</a></li>
+                        <li><a href="shipping.html">3. Shipping</a></li>
+                    </ul>
+                </li>
+                <li class="topitem"><a href="history.html" class="dropbtn">History</a>
+                </li>
 
-        <li class="topitem"><a href="headquarters.html" class="dropbtn">Headquarters</a>
-            <ul class="dropdown-content">
-                <li><a href="board_of_directors.html">Board Of Directors</a></li>
-                <li><a href="international_suppliers.html">International Suppliers</a></li>
-                <li><a href="kijuju_laboratory.html">Kijuju Laboratory</a></li>
-                <li><a href="mariehamn_data_lab.html">Mariehamn Data Lab</a></li>
+                <li class="topitem"><a href="headquarters.html" class="dropbtn">Headquarters</a>
+                    <ul class="dropdown-content">
+                        <li><a href="board_of_directors.html">Board Of Directors</a></li>
+                        <li><a href="international_suppliers.html">International Suppliers</a></li>
+                        <li><a href="kijuju_laboratory.html">Kijuju Laboratory</a></li>
+                        <li><a href="mariehamn_data_lab.html">Mariehamn Data Lab</a></li>
+                    </ul>
+                </li>
+                <li class="topitem"><a href="personnel_registry.html" class="dropbtn">Personnel Registry</a>
+                </li>
             </ul>
-        </li>
-        <li class="topitem"><a href="personnel_registry.html" class="dropbtn">Personnel Registry</a>
-        </li>
-    </ul>
-</nav>
+    </nav>
+
 
 <main>
     <article>
         <h2>Shipping</h2>
-         <img src="./images/featuredimage_shipping.jpg" alt="featuredimage_index" class="main-logo ">
+         <img src="./images/shipping-bild4.jpg" alt="shipping-bild4" class="main-logo ">
 
 
 	<br /><br />
@@ -72,7 +93,7 @@
     </article>
 
 
-    <aside>
+  <aside>
         <section class="login-container">
             <h3>Staff Login</h3>
             <form><label for="employeeCode">Employee code:</label>
@@ -81,14 +102,13 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" class="login-input">
             
-                <div class="login-bottons">
+                <div class="login-buttons">
                     <button type="submit" class="my-button btn-login">Login</button>
                     <button type="reset" class="my-button btn-reset">Reset</button>
                 </div>
             </form>
         </section>
 
-        
         <nav id="rightnav">
             <ul class="aside-container">
                 <li class="my-button2">knapp 4</li>
@@ -121,42 +141,6 @@
      </div>
     
 </footer>
-<audio id="hoverSound" src="sounds/button.mp3" preload="auto"></audio>
-<script>
-   
-    document.addEventListener('DOMContentLoaded', function() {
-        const header = document.getElementById('header-container');
-        const video = document.getElementById('header-video');
-        let hasStarted = false;
-
-        // Funktion för att faktiskt starta allt
-        function startExperience() {
-            if (!hasStarted) {
-                video.muted = false;
-                video.play().then(() => {
-                    console.log("Tricell System Online: Video & Audio started");
-                    hasStarted = true;
-                }).catch(error => {
-                    console.log("Autoplay blockerades. Kräver ett klick på sidan.");
-                });
-            }
-        }
-
-        // 1. Försök starta vid musrörelse över headern
-        header.addEventListener('mousemove', startExperience);
-
-        // 2. BACKUP: Starta vid klick var som helst (webbläsarkrav)
-        document.addEventListener('click', startExperience, { once: true });
-    });
-
-    function playHover() {
-        const sound = document.getElementById("hoverSound");
-        if (sound) {
-            sound.pause(); // Avbryt pågående ljud om man hovrar snabbt
-            sound.currentTime = 0;
-            sound.play().catch(e => console.log("Ljudet väntar på användarinteraktion..."));
-        }
-    }
-
-</script>
+</div>
 </body>
+</html>

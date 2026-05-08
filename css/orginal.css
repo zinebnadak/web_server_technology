@@ -9,8 +9,8 @@ html, body
 #topnav
 {
     position: absolute;
-    background-color: #385723;
-    color: white;
+    background-color: white;
+    color: #385723;
     text-align: center;
     font-family: Arial;
     font-size: 15px;
@@ -22,6 +22,7 @@ html, body
     justify-content: center;
     overflow: visible !important;
     z-index: 1000;
+
 }
 ul.topmenu
 {
@@ -32,10 +33,11 @@ ul.topmenu
     margin: 0;
     overflow: visible;
     display: flex !important;
+    
 }
 li.topitem
 {
-    background-color: #385723;
+    background-color: white;
     display: inline-block;
     height: 100%;
     line-height: 30px;
@@ -49,7 +51,7 @@ li a
     font-family: arial;
     font-size: 12px;
     font-weight: bold;
-    color: white;
+    color: #385723;
     text-decoration: none;
 }
 main
@@ -88,7 +90,7 @@ aside
     padding: 15px;
     width: 170px;
     margin: 20px auto;
-    border: 2px solid black;
+    border: 2px solid #92f9f1;
     background-color: #f9f9f9;
     font-family: Arial, sans-serif;
     box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
@@ -114,12 +116,12 @@ li.rightitem
     font-size: 12px;
     font-weight: bold;
     margin-bottom: 10px;
-    background-color: #385723;
+    background-color: white;
     height: 30px;
     width: 100px;
     line-height: 30px;
     text-align: center;
-    color: white;
+    color: #385723;
 }
 .grid-container 
 {
@@ -136,8 +138,8 @@ li.rightitem
 .grid-emptygreen 
 {
     grid-column: span 4;
-    background-color: #385723;
-    color: white;
+    background-color: white;
+    color: #385723;
     text-align: center;
     font-size: 15px;
     font-weight: bold;
@@ -149,8 +151,9 @@ li.rightitem
 
 .grid-breadcrumb 
 {
+    
     grid-column: span 4;
-    background-color: #96bf7b;
+    background-color: white;
     background-image: url('./images/Header_img_01.jpg');
     background-size: cover;
     position: relative;
@@ -198,17 +201,21 @@ li.rightitem
 {
     position: relative;
     display: inline-block;
+    
 }
 
 .dropbtn 
 {
-    background-color: #385723;
+    background-color: #70cdde;
     color: white;
     padding: 12px 25px;
-    border: 2px solid black;
+    border: 1px solid black;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
+    border-radius: 8px;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+
 }
 
 .dropbtn:hover 
@@ -258,6 +265,7 @@ li.rightitem
 /* Sidebar & Login */
 .grid-rightmenu 
 {
+    
     background-color: white;
     padding: 10px;
 }
@@ -269,12 +277,15 @@ li.rightitem
     gap: 10px;
     padding: 15px;
     width: 170px;
-    margin: 20px auto;
-    border: 2px solid black;
-    background-color: #f9f9f9;
+    margin: 55px auto 20px auto;    
+    border: 0;
+    background-image: url(../images/login2.png);
     font-family: Arial, sans-serif;
     box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
     box-sizing: border-box;
+    background-size: cover;       /* Gör att bilden täcker hela boxen */
+    background-position: center;   /* Centrerar bilden i boxen */
+    background-repeat: no-repeat;  /
 }
 
 .login-input 
@@ -283,7 +294,9 @@ li.rightitem
     box-sizing: border-box;
     padding: 8px;
     margin-bottom: 10px;
-    border: 2px solid black;
+    border: 1px solid rgb(52, 51, 59);
+    border-radius: 8px;
+
 }
 
 .login-buttons 
@@ -292,6 +305,8 @@ li.rightitem
     flex-direction: row; 
     gap: 10px;          
     margin-top: 10px;
+    border-radius: 8px;
+
 }
 
 /* Footer */
@@ -302,12 +317,17 @@ li.rightitem
 
 .grid-footer 
 {
+    background-size: cover;       /* Fyller hela footern utan att skeva bilden */
+    background-position: center;   /* Centrerar motivet */
+    background-repeat: no-repeat;   
+    background-image: url('../images/ormbunkesidor.webp');
     grid-column: span 2;
     background-color: black;
     display: flex;
     align-items: center;   
-    justify-content: space-around;
     padding: 20px 0;
+    gap: 40px;
+    justify-content: center;
 }
 .footer-logo 
 {
@@ -320,7 +340,7 @@ li.rightitem
 footer
 {
     clear: both;
-    background-color: black;
+   
     height: 200px;
     width: 100%;
     line-height: 200px;
@@ -329,15 +349,6 @@ footer
     font-size: 14px;
     font-weight: bold;
     color: black;
-}
-.grid-footer
-{
-   
-    background-color: black;
-    display: flex;
-    align-items: center;   
-    gap: 40px;
-    justify-content: center;
 }
 .footer-text 
 {
@@ -385,27 +396,28 @@ footer
 /* Gemensamma knappar */
 .my-button 
 {
-    background-color: #385723;
-    color: white;
-    border: 2px solid black;
+    background-color: white;
+    color: #385723;
+    border: 1px solid rgb(52, 51, 59);
     padding: 10px;
     cursor: pointer;
     box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
     transition: all 0.2s;
     font-family: Arial;
+    border-radius: 8px;
 }
 .my-button2 
 {
     width: 100px;           
     padding: 10px;
-    background-color: #385723; 
-    color: white;
-    border: none;
+    background-color: white; 
+    color: #385723;
     font-family: Arial;
     cursor: pointer;   
-    border: 2px solid black;
+    border: 1px solid rgb(52, 51, 59);
     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
     transition: all 0.2s;
+    border-radius: 8px;
 }
 
 .my-button:hover {
@@ -416,11 +428,11 @@ footer
 .my-button2:hover {
     background-color: #4e7a31;
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+    box-shadow: 6px 6px 0px rgba(248, 244, 45, 0.527);
 }
 
 .btn-reset {
-    background-color: #666;
+    background-color: #9bcb42;
 }
 .button-column 
 {
@@ -434,6 +446,6 @@ footer
     box-sizing: border-box;
 
     /* SVART RUTA RUNT ALLT */
-    border: 2px solid black; 
-    background-color: #f9f9f9; 
+    border: 1px solid rgb(52, 51, 59);
+    background-color: white; 
 }
