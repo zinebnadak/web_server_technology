@@ -5,13 +5,13 @@ html, body
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: black;
+    background-color: white;
 }
 #topnav
 {
     position: absolute;
-    background-color: rgb(3, 2, 2);
-    color: #ffffff;
+    background-color: rgb(250, 230, 230);
+    color: #fcdfbe;
     text-align: center;
     font-family: Arial;
     font-size: 15px;
@@ -23,7 +23,7 @@ html, body
     justify-content: center;
     overflow: visible !important;
     z-index: 1000;
-    background-color: black;
+    background-color:   rgb(255, 255, 255);
 
 }
 ul.topmenu
@@ -35,12 +35,16 @@ ul.topmenu
     margin: 0;
     overflow: visible;
     display: flex !important;
-    background-color: black;
-    
+    background-color: rgb(214, 197, 197);
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+    border: none;
+    border-top: 1px solid #661111;
+    border-left: 1px solid #661111;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
 }
 li.topitem
 {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     display: inline-block;
     height: 100%;
     line-height: 30px;
@@ -48,42 +52,91 @@ li.topitem
     padding-right: 5px;
     margin: 0 2px;
     position: relative;
+    
 }
 li a 
 {
     font-family: arial;
     font-size: 12px;
     font-weight: bold;
-    color: #fa0505;
+    color: #fffdfd;
     text-decoration: none;
 }
-main
-{
-    clear: both;
-    margin-left: auto;
-    margin-right: auto;
-    width: 900px;
-    margin-top: 30px;
+/* Samlingsboxen som sträcker sig över hela skärmen och delar upp i 3 kolumner */
+.main-wrapper {
+    display: grid;
+    grid-template-columns: 500px 1fr 300px; /* Bild: 150px, Text: Allt utrymme emellan, Meny: 200px */
+    gap: 0px;                               /* Ger ett perfekt, automatiskt mellanrum mellan kolumnerna */
+    width: 100%;                             /* Tar upp 100% av skärmbredden */
+    max-width: 1450px;                       /* Hindrar sidan från att bli för bred på jätteskärmar */
+    margin: 40px auto 0 auto;                /* Centrerar hela paketet och ger avstånd från menyn */
+    padding: 0 px;                         /* Sido-padding så inget slår i skärmens ytterkanter */
+    box-sizing: border-box;
+    margin-left: 160px;
+}
+.stort-mellanrum {
+    margin-left: 150px; /* Ändra denna siffra för att göra mellanrummet större eller mindre */
+}
+.stort-mellanrum2 {
+    margin-left: 205px; /* Ändra denna siffra för att göra mellanrummet större eller mindre */
+}
+/* Bilden anpassar sig efter sin tilldelade kolumn (150px) */
+.left-side-image {
+    width: 100%;                             
+    height: auto;
+    margin-top: 20px;
+    /* Alla gamla floats och marginaler är borttagna, Grid sköter placeringen! */
+}
+
+/* Main fungerar nu bara som en ren behållare för artikeln */
+main {
+    width: 100%;
     min-height: 400px;
 }
-article
-{
-    background-color: black;
-    width: 690px;
+
+/* Textrutan fyller ut hela mittutrymmet automatiskt */
+article {
+    background-color: white;
+    width: 100%;                             
     padding: 5px;
     font-family: arial;
     font-size: 12px;
-    color: white;
+    color: #4b2a04;
+}
+
+/* Sidomenyn ligger tryggt i sin egen kolumn till höger */
+aside {
+    padding-top: 20px;
+    background-color: white;
+    width: 100%;                             /* Fyller ut kolumnen som är satt till 200px */
+    height: auto;
+}
+/*article
+{
+    background-color: white;
+    width: 580px;
+    padding: 5px;
+    font-family: arial;
+    font-size: 12px;
+    color: #fcdfbe;
     float: left;
     height: 100%;
 }
 aside
 {
-    background-color: rgb(0, 0, 0);
+    padding-top: 28px;
+    background-color: white;
     width: 200px;
     float: right;
     height: 400px;
-}
+} */
+ /*aside {
+    padding-top: 28px;
+    background-color: white;
+    width: 200px;             /* Här sätter du din fasta bredd på högermenyn */
+    float: right;
+    height: 400px;
+}*/
 .aside-container 
 {
     display: flex;
@@ -94,11 +147,11 @@ aside
     width: 170px;
     margin: 20px auto;
     /*border: 2px solid #fb0404;*/
-    background-color: black;
+    background-color: white;
     font-family: Arial, sans-serif;
     box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 8px; 
     border: none;
     border-top: 1px solid #661111;
     border-left: 1px solid #661111;
@@ -125,12 +178,12 @@ li.rightitem
     font-size: 12px;
     font-weight: bold;
     margin-bottom: 10px;
-    background-color: black;
+    background-color: white;
     height: 30px;
     width: 100px;
     line-height: 30px;
     text-align: center;
-    color: #fefefe;
+    color:#fcdfbe;
 
 }
 .grid-container 
@@ -140,7 +193,8 @@ li.rightitem
     grid-template-rows: auto 300px 50px 1fr auto; /* Ändrat till auto/1fr för bättre responsivitet */
     min-height: 100vh;
 }
-#header-container {
+#header-container 
+{
     cursor: default;
     pointer-events: auto !important; /* Tvinga containern att lyssna på musen */
 }
@@ -148,7 +202,7 @@ li.rightitem
 .grid-emptygreen 
 {
     grid-column: span 4;
-    background-color: black;
+    background-color: white;
     color: rgb(174, 1, 1);
     text-align: center;
     font-size: 15px;
@@ -162,19 +216,19 @@ li.rightitem
 
 .grid-breadcrumb 
 {
-    
+    padding-top: 40px; 
     grid-column: span 4;
     background-color: white;
-    background-image: url('./images/Untitled_Artwork(2).png');
+    background-image: url('./images/Untitled_Artwork(2.1).png');
     background-size: cover;
     position: relative;
-    height: 300px;
+    height: 250px;
 }
 
 .header-social-links 
 {
     position: absolute;     
-    top: 15px;              
+    top: 40px;              
     left: 50%;             
     transform: translateX(-50%);   
     display: flex;          
@@ -197,12 +251,11 @@ li.rightitem
     left: 50px;
     height: 150px;
 }
-
 /* Navigering */
 .grid-topmenu 
 {
     grid-column: span 4;
-    background-color: black;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,8 +270,8 @@ li.rightitem
 
 .dropbtn 
 {
-    background-color: #11110f;
-    color: white;
+    background-color: #ffffff;
+    color: #2b1701;
     padding: 12px 25px;
     /*border: 1px solid rgb(255, 2, 2);*/
     font-weight: bold;
@@ -231,18 +284,29 @@ li.rightitem
     border-left: 1px solid #661111;
     box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
     transition: all 0.2s ease;
+
+    
 }
 
 .dropbtn:hover 
 {
-    background-color: #fa0303;
+    background-color: #e3c7c7;
+        /* Gör skuggan "inåtvänd" så knappen ser nedtryckt ut */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.9);
+    
+    /* Flyttar ner knappen 2 pixlar fysiskt när man klickar */
+    transform: translateY(2px); 
+    
+    /* Gör den röda kanten mörkare när den trycks ner */
+    border-top: 1px solid #220000;
+    border-left: 1px solid #220000;
 }
 
 .dropdown-content 
 {
     display: none;
     position: absolute;
-    background-color: #000000;
+    background-color: #542727;
     min-width: 200px;
     border: 2px solid black;
     box-shadow: 6px 6px 0px rgba(0,0,0,0.2);
@@ -256,7 +320,7 @@ li.rightitem
 
 .dropdown-content a 
 {
-    color: black;
+    color: rgb(137, 114, 114);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -266,7 +330,7 @@ li.rightitem
 /* Main Content */
 .grid-main 
 {
-    background-color: rgb(2, 2, 2);
+    background-color: white;
     padding: 20px;
 }
 
@@ -281,7 +345,7 @@ li.rightitem
 .grid-rightmenu 
 {
     
-    background-color: rgb(0, 0, 0);
+    background-color: white;
     padding: 10px;
 }
 
@@ -295,19 +359,50 @@ li.rightitem
     margin: 55px auto 20px auto;    
     /*border: 1;*/
     /*background-image: url(../images/login2.png);*/
-    font-family: Arial, sans-serif;
+    /*font-family: Arial, sans-serif;
     color: white;
-    box-shadow: 5px 5px 0px rgba(1,1,1,1.0);
+    box-shadow: 5px 5px 0px rgba(1,1,1,1.0);*/
     box-sizing: border-box;
     background-size: cover;       /* Gör att bilden täcker hela boxen */
     background-position: center;   /* Centrerar bilden i boxen */
     background-repeat: no-repeat;  
-    background-color: black;
+    /*background-color: black;*/
     border: none;
     border-top: 1px solid #661111;
     border-left: 1px solid #661111;
     box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
     transition: all 0.2s ease;
+    border-radius: 8px;
+    /*background-image: url('./images/securityaccessLevel.png');*/
+    
+}
+.login-container2
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /*padding: 15px;*/
+    width: 170px;
+    /*margin: 55px auto 20px auto;  */  
+    /*border: 1;*/
+    /*background-image: url(../images/login2.png);*/
+    /*font-family: Arial, sans-serif;
+    color: white;
+    box-shadow: 5px 5px 0px rgba(1,1,1,1.0);*/
+    box-sizing: border-box;
+    background-size: cover;       /* Gör att bilden täcker hela boxen */
+    background-position: center;   /* Centrerar bilden i boxen */
+    background-repeat: no-repeat;  
+    /*background-color: black;*/
+    border: none;
+    border-top: 1px solid #661111;
+    border-left: 1px solid #661111;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    /*background-image: url('./images/securityaccessLevel.png');*/
+    margin: 15px auto 20px auto;
+    object-fit: cover;
 }
 
 .login-input 
@@ -338,7 +433,7 @@ li.rightitem
 /* Footer */
 .grid-emptyblack 
 {
-    background-color: black;
+    background-color: white;
 }
 
 .grid-footer 
@@ -348,7 +443,7 @@ li.rightitem
     background-repeat: no-repeat;   
     background-image: url('../images/Untitled_Artwork(3).png');
     grid-column: span 2;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;   
     padding: 20px 0;
@@ -374,7 +469,7 @@ footer
     font-family: areal;
     font-size: 14px;
     font-weight: bold;
-    color: black;
+    color: white;
 }
 .footer-text 
 {
@@ -382,7 +477,7 @@ footer
     line-height: 1.0;           
     font-size: 13px;
     font-weight: normal;
-    color: white;
+    color: rgb(184, 145, 47);
     padding: 20px;
 }
 
@@ -391,7 +486,7 @@ footer
    display: flex;
     flex-direction: column; 
     align-items: center;    
-    color: rgb(241, 203, 11);           
+    color: rgb(155, 93, 31);           
     font-family: Arial;
     font-size: 12px;
 }
@@ -410,20 +505,20 @@ footer
     display: flex; 
     margin-bottom: 5px;
 }
-.footer-contact 
+/*.footer-contact 
 {
     display: flex;
     flex-direction: column; 
     align-items: center;    
-    color: rgb(241, 203, 11);           
+    color: rgb(32, 31, 30);           
     font-family: Arial;
     font-size: 12px;       
-}
+}*/
 /* Gemensamma knappar */
 .my-button 
 {
-    background-color: rgb(0, 0, 0);
-    color: #fbfff8;
+    background-color: rgb(255, 255, 255);
+    color: #472601;
     /*border: 1px solid rgb(250, 3, 3);*/
     padding: 10px;
     cursor: pointer;
@@ -438,7 +533,8 @@ footer
     box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
     transition: all 0.2s ease;
 }
-.raised-button-red:active {
+.raised-button-red:active 
+{
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.9);
     transform: translateY(2px);
 }
@@ -446,8 +542,8 @@ footer
 {
     width: 100px;           
     padding: 10px;
-    background-color: rgb(0, 0, 0); 
-    color: #fdfafa;
+    background-color:  rgb(250, 247, 247); 
+    color: #2c1801;
     font-family: Arial;
     cursor: pointer;   
     /*border: 1px solid rgb(255, 5, 5);*/
@@ -460,7 +556,8 @@ footer
     box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
     transition: all 0.2s ease;
 }
-.my-button:hover {
+.my-button:hover 
+{
     /* Gör skuggan "inåtvänd" så knappen ser nedtryckt ut */
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.9);
     
@@ -476,7 +573,8 @@ footer
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
 }*/
-.my-button2:hover {
+.my-button2:hover 
+{
     /* Gör skuggan "inåtvänd" så knappen ser nedtryckt ut */
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.9);
     
@@ -493,7 +591,8 @@ footer
     box-shadow: 6px 6px 0px rgba(248, 244, 45, 0.527);
 }*/
 
-.btn-reset {
+.btn-reset 
+{
     background-color: #d5d5d5;
 }
 .button-column 
