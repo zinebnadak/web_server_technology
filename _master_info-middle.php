@@ -1,4 +1,6 @@
 <?php
+echo "Navigation: <a href=\"http://" . $siteaddress . "\">" .$siteaddress."</a> \ " . $site;
+readtextfile($target);
 if(isset($_GET["site"]))
 {
     $site = $_GET["site"];
@@ -17,5 +19,6 @@ else
     $target = "text/index.html";
     readtextfile($target);
 }
+
 
 ?>
