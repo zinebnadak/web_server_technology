@@ -1,3 +1,8 @@
+<?php $breadcrumimage = randomBreadcrumImage(); ?>
+<div class = "grid-breadcrum"
+    style="background-image:url(images/<?=$breadcrumimage ?>);">
+
+
 <div class="header-social-links">
             <a href="https://www.facebook.com/tricell" target="_blank" title="Visit us on Facebook">
                 <img src="./images/social_icon_facebook.png" alt="Facebook" class="social-icon">
@@ -24,3 +29,4 @@
             <section class="grid-breadcrumb">
         <img src="./images/umbrellaLiggandes.png" class="background-img" id="img1" alt="Umbrella Background" style="width: 600px; height: auto; margin-left: 150px; margin-right: 50px; margin-top: 20px; margin-bottom: 30px;">                
     </section>
+</div>

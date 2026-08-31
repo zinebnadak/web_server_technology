@@ -134,9 +134,10 @@ aside
     padding-top: 28px;
     background-color: white;
     width: 200px;             /* Här sätter du din fasta bredd på högermenyn */
-    float: right;
+/*    float: right;
     height: 400px;
-}*/
+}
+*/
 .aside-container 
 {
     display: flex;
@@ -224,7 +225,32 @@ li.rightitem
     position: relative;
     height: 250px;
 }
-
+/* nya början (från kim) */
+.grid-breadcrum
+{
+    grid-column: span 4;
+    background-color: #8bb3c5;
+    /* background-image: url(../images/breadcrum01.jpg); */
+    position: relative;  
+}
+.breadcrumimage
+{
+    margin-left: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    float: left;
+}
+.breadcrummenu
+{
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    top: 10;
+    float: left;
+}
+/* nya slut (från kim)*/
 .header-social-links 
 {
     position: absolute;     
