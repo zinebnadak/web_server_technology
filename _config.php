@@ -18,10 +18,10 @@ if (!$conn)
 }
 
 // Run SQL-statement
-if($result = mysqli_query($conn, "SELECT * FROM users WHERE employeecode='$employeecode' AND passwd='password'"))
+/*if($result = mysqli_query($conn, "SELECT * FROM users WHERE employeecode='$employeecode' AND passwd='password'"))
 {
     // Loopa genom resultat-arrayen
-    while($row = msqli_fetch_assoc($result))
+    while($row = mysqli_fetch_assoc($result))
     {
         // Läs in värden
         $id = $row["id"];
@@ -30,6 +30,6 @@ if($result = mysqli_query($conn, "SELECT * FROM users WHERE employeecode='$emplo
         $lockout = $row["lockout"];
         $loggedin = "ok";
     }
-}
+}*/
 
 ?>
