@@ -8,10 +8,10 @@ $dbname = "thenest_umbrellacorp_top";
 $dbuser = "mysqluser";
 $dbpassword = "umbrella";
 
-// Create connection
+// Create the connection
 $conn = mysqli_connect($dbhost, $dbuser, $dbpassword, $dbname);
 
-// Check connection
+// Check the connection
 if (!$conn)
 {
     die("Connection failed: " . mysqli_connect_error());
