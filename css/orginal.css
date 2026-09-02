@@ -220,19 +220,19 @@ li.rightitem
     padding-top: 40px; 
     grid-column: span 4;
     background-color: white;
-    background-image: url('./images/Untitled_Artwork(2.1).png');
+    background-image: url('./images/Untitled_Artwork(2.1).png'); 
     background-size: cover;
     position: relative;
     height: 250px;
 }
 /* nya början (från kim) */
-.grid-breadcrum
+/*.grid-breadcrum
 {
     grid-column: span 4;
     background-color: #8bb3c5;
     /* background-image: url(../images/breadcrum01.jpg); */
-    position: relative;  
-}
+    /* position: relative;   
+} */
 .breadcrumimage
 {
     margin-left: 100px;

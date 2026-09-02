@@ -1,6 +1,5 @@
 <?php $breadcrumimage = randomBreadcrumImage(); ?>
-<div class = "grid-breadcrum"
-    style="background-image:url(images/<?=$breadcrumimage ?>);">
+
 
 
 <div class="header-social-links">
@@ -25,8 +24,10 @@
             <a href="http://intranet.tricell.local" title="Tricell Intranet">
                 <img src="./images/social_icon_www.png" alt="www" class="social-icon">
             </a>
-        </div>
-            <section class="grid-breadcrumb">
-        <img src="./images/umbrellaLiggandes.png" class="background-img" id="img1" alt="Umbrella Background" style="width: 600px; height: auto; margin-left: 150px; margin-right: 50px; margin-top: 20px; margin-bottom: 30px;">                
-    </section>
 </div>
+
+
+<section class="grid-breadcrumb">
+    <img src="./images/umbrellaLiggandes.png" class="background-img" id="img1" alt="Umbrella Background" style="background-image:url(images/<?=$breadcrumimage ?>); width: 600px; height: auto; margin-left: 150px; margin-right: 50px; margin-top: 20px; margin-bottom: 30px;">                
+</section> 
+
