@@ -3,7 +3,7 @@ This course is the continuing on the same webbapplication build during frontend-
 
 As part of this course, we set up and configured the physical/virtual server that hosts the site ourselves , including the webserver, MariaDB, and PHP environment. We connect to the server remotely over OpenVPN and develop directly on it via SSH (VS Code Remote-SSH), so all changes are made straight on the live environment rather than a local copy.
 
-You can visit our webapplication at [https://thenest.umbrellacorp.top/](https://thenest.umbrellacorp.top/) on the web! :)
+You can visit our webapplication at [https://thenest.umbrellacorp.top/](https://thenest.umbrellacorp.top/) on the web whenever our server is on! :)
 
 Made by Malin and Zineb
 
