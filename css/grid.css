@@ -1,0 +1,231 @@
+body
+{
+    margin: 0px;
+}
+a:link { color:#ffffff; text-decoration: none; }
+a:visited { color:#ffffff; text-decoration: none; }
+a:hover { color:#000000; text-decoration: underline; }
+
+.grid-container
+{
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 700px 200px auto;
+    grid-template-rows: 30px 300px 50px auto auto;
+    grid-gap: 0px;
+}
+/* ------------ HEADER -------------------------------------- */
+.grid-header
+{
+    grid-column: span 2;
+    background-color: black;
+    position: relative;   
+}    
+.header
+{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -30%);
+    width: 950px;
+    height: 30px;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+/* ------------ BREADCRUM ------------------------------------- */
+.grid-breadcrum
+{
+    grid-column: span 4;
+    background-color: #8bb3c5;
+    background-image: url(../images/breadcrum01.jpg);
+    position: relative;  
+}
+.breadcrumimage
+{
+    margin-left: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    float: left;
+}
+.breadcrummenu
+{
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    top: 10;
+    float: left;
+}
+
+/* ------------- TOPMENU ---------------------------------------- */
+.grid-topmenu
+{
+    grid-column: span 4;
+    background-color: darkred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topmenu
+{
+}
+.topmenuitem1, .topmenuitem2
+{
+    height: 50px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right   : 20px;
+    float: left;
+}
+.topmenuitem1 { background-color: #660000; }
+.topmenuitem1:hover { background-color: #330000; }
+.topmenuitem2 { background-color: #990000; }
+.topmenuitem2:hover { background-color: #660000; }
+
+.topmenudrop
+{
+    border: 1px solid black;
+	display: none;
+	position: absolute;
+	z-index: 2;
+}
+.topmenuitem1:hover .topmenudrop
+{
+	display: block;
+}
+.topmenudropitem
+{
+    background-color: darkred;
+    height: 30px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.topmenudropitem:hover { background-color: #330000; }
+
+/* ----------- EMPTY --------------------------------------------- */
+.grid-empty
+{
+}
+.grid-emptyblack
+{
+    background-color: black;
+}
+
+/* ----------- MAIN ---------------------------------------------- */
+.featuredimage
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.grid-main
+{
+    background-color: white;
+}
+.main
+{
+    padding: 20px;
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 1.5;
+}
+/* ----------- RIGHT MENU ----------------------------------------- */
+.grid-rightmenu
+{
+    background-color: #8bb3c5;
+    min-height: 1.5;
+}
+.rightmenuitem
+{
+    width: 160px; 
+    background-color: darkred;
+    text-align: center;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    padding: 5pt;
+    margin: 10px;
+    border: 1px black solid;
+}
+.rightmenuitem:hover 
+{
+    background-color: black;
+}
+.rightloginform
+{
+    border: 1px black solid;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 0px;
+    margin: 10px;
+    font-size: 10px;
+    background-color: #a1d0e8;
+}
+.button
+{
+	border: 1px solid black;
+	background-color : #d7ecff; 
+	font-size: 10px;    
+}
+input[type=text], input[type=password]
+{
+	padding: 5px 5px;
+	box-sizing: border-box;
+	border: 1px solid black;
+	background-color : #d7ecff; 
+	font-size: 10px;
+}
+/* ------------ FOOTER ---------------------------------------------- */
+.grid-footer
+{
+    grid-column: span 2;
+    background-color: black;
+}
+.footer
+{
+    width: 950px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footerleft
+{
+    width: 180px;
+    float: left;
+}
+.footermiddle1
+{
+    width: 300px;
+    font-family: Arial;
+    font-size: 11px;
+    color: white;
+    float: left;
+}
+.footermiddle2
+{
+    width: 250px;
+    font-family: Arial;
+    font-size: 9px;
+    color: white;
+    margin-bottom: 20px;
+    float: left;
+}
+.footerright
+{
+    width: 180px;
+    margin-bottom: 20px;
+    float: left;
+}
