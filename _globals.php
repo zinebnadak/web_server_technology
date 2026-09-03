@@ -1,7 +1,10 @@
 <?php
+// GLOBALA VARIABLER
+$siteaddress = "www.umbrellacorp.top";
 
-//Läs in globala funktioner
-include ("_f_readtextfile.php");
-
+// LÄS IN GLOBALA FUNKTIONER
+include("_f_readtextfile.php");
 
 ?>
+
+

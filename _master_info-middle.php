@@ -1,21 +1,26 @@
+<div class="main">
+
 <?php
-if(isset($_GET["site"]))
+if(isset($_GET['site']))
 {
     $site = $_GET["site"];
     if($site=="")
     {
-        $target = "text/index.html";
+        $target="text/index.html";
+        $site="";
     }
     else
     {
-        $target = "text/".$site.".html";
+	    $target="text/".$site.".html";
     }
-    readtextfile($target);
 }
 else
 {
-    $target = "text/index.html";
-    readtextfile($target);
+    $target="text/index.html";
+    $site="";
 }
-
+echo "Navigation: <a href=\"http://". $siteaddress . "\">". $siteaddress."</a> / " . $site ;
+readtextfile($target);
 ?>
+  
+</div>

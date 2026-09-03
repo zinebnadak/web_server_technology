@@ -1,61 +1,52 @@
-<?php include("_security.php") ?>
-<?php include("_config.php") ?>
-<?php include("_globals.php") ?>
+<?php include("_security.php") ?>     
+<?php include("_config.php") ?>     
+<?php include("_globals.php") ?>     
 
-<?php
-//-----------LOCALS---------------------------------
+<?php 
+// ----- Locals: ------
 
 ?>
 
-<?php include("_master_head.php") ?>
+<?php include("_master_head.php") ?>     
+<div class="grid-container">
 
-
-<div class="container">
-<header id="header-container">
-    <div class="grid-emptygreen">            
-    
-    <!----Grid row 1 start------------------------------------>
-    <?php include("_master_header.php") ?>
+    <!---- GRID ROW 1 START ------------------------------------------>
+    <div class="grid-emptyblack" ></div>
+    <div class="grid-header">
+        <?php include("_master_header.php") ?>     
     </div>
-    <?php include("_master_breadcrum.php") ?>            
+    <div class="grid-emptyblack"></div>
+    <!---- GRID ROW 1 END --------------------------------------------->
 
-    
-</header>
-
-    <nav id="topnav">
-    
-    <?php include("_master_menu.php") ?>
-
-    </nav>
-    
-        
-
-<div class="main-wrapper">
-        
-    <?php include("_master_flower.php") ?>        
-        <main>
-            <article>
-                
-            <?php include("_master_info-middle.php") ?>
-
-            </article>
-            <address class="footer-text">
-
-            <?php include("_master_footer.php") ?>
-
-            </address> 
-        </main>
-
-        
-
+    <!---- GRID ROW 2 START ------------------------------------------->
+    <div class="grid-breadcrum">
+        <?php include("_master_breadcrum.php") ?>  
     </div>
+    <!---- GRID ROW 2 END --------------------------------------------->
 
-<footer>
-   
-    
-</footer>
+    <!---- GRID ROW 3 START ------------------------------------------->
+    <div class="grid-topmenu">
+        <?php include("_master_menu.php") ?>
+    </div>
+    <!---- GRID ROW 3 END -------------------------------------------->
+
+    <!---- GRID ROW 4 START ------------------------------------------>
+    <div class="grid-empty"></div>
+    <div class="grid-main">
+        <?php include("_master_info-middle.php") ?>
+    </div>
+    <div class="grid-rightmenu">        
+        <?php include("_master_info-menu.php") ?>
+    </div>
+    <div class="grid-empty"></div>
+    <!---- GRID ROW 4 END --------------------------------------------->
+
+    <div class="grid-emptyblack" ></div>
+    <div class="grid-footer">
+        <?php include("_master_footer.php") ?>
+    </div>
+    <div class="grid-emptyblack"></div>
+
 </div>
-
-
 
 <?php include("_master_bottom.php") ?>
