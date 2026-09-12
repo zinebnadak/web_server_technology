@@ -1,5 +1,5 @@
 // övning 12 aktvitetslogg
-// besök 
+// besök http://thenest.umbrellacorp.top/index.php?site=activitylog_read
 
 <?php
 ini_set('display_errors', 1);
