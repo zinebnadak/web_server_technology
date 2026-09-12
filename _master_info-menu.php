@@ -77,19 +77,25 @@ function closePasswordModal()
 
 <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == "ok") 
     { ?>
-    <div class="rightmenuitem">Right button 1</div>
-    <a href="index.php?site=personnelregistry_read"class="rightmenuitem" style="text-decoration: none; color: inherit; display: inline-block;">Personnel Registry</a>
-   <!---   Om man är level A  ---->
-    <?php $accessLevel = $_SESSION['securityAccessLevel'] 
+    <?php 
+    // Hämta access level EN gång, överst
+    $accessLevel = $_SESSION['securityAccessLevel'] 
                 ?? $_SESSION['securityaccesslevel'] 
                 ?? $_SESSION['employee']['securityAccessLevel'] 
                 ?? $_SESSION['employee']['securityaccesslevel'] 
                 ?? '';
-
-    // Jämför om nivån är 'A' (oavsett om det är litet eller stort 'a')
-    if (strtoupper($accessLevel) === 'A') 
-        { 
     ?>
+
+    <?php if (strtoupper($accessLevel) === 'A') { ?>
+        <a href="index.php?site=activitylog_read" class="rightmenuitem" style="text-decoration: none; color: inherit; display: inline-block;">Activity Log</a>
+    <?php } else { ?>
+        <div class="rightmenuitem">Right button 1</div>
+    <?php } ?>
+
+    <a href="index.php?site=personnelregistry_read" class="rightmenuitem" style="text-decoration: none; color: inherit; display: inline-block;">Personnel Registry</a>
+
+    <!---   Om man är level A  ---->
+    <?php if (strtoupper($accessLevel) === 'A') { ?>
         <a href="index.php?site=user_read" class="rightmenuitem" style="text-decoration: none; color: inherit; display: inline-block;">Users</a>
     <?php } ?>
 <?php 

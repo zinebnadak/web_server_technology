@@ -18,6 +18,9 @@ include("_security.php");
 include("_config.php");
 include("_globals.php");
 
+// övning 12, aktivitetslogg
+logactivity($_SESSION["employeecode"], date("Y-m-d"), date("H:i:s"), "User logged out", $_SESSION["employeecode"], "Logout from " . $_SERVER['REMOTE_ADDR'], "Login/logout");
+
 
 unset($_SESSION["loggedin"]);
 unset($_SESSION["employeecode"]);

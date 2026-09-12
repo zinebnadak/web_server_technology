@@ -13,6 +13,10 @@ if (!isset($conn)) {
     }
 }
 
+if (file_exists("_globals.php")) {
+    include_once("_globals.php");
+}
+
 if (!isset($conn)) {
     die("<p style='color:red;'>Kunde inte ansluta till databasen (\$conn saknas).</p>");
 }
@@ -101,6 +105,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         );
 
         if ($stmt->execute()) {
+            // övning 12, aktivitetslogg 
+            logactivity($_SESSION['employeecode'] ?? 'SYSTEM', date("Y-m-d"), date("H:i:s"), "New employee added", $employeeCode, "New employee $name added to personnel registry", "Employees");
             // Omdirigera till listan efter sparande
             header("Location: index.php?site=personnelregistry_read&msg=success");
             exit();

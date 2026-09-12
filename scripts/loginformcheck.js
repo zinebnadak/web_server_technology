@@ -1,6 +1,8 @@
 function hashing()
 {
+	// console.log("RAW password value:", JSON.stringify(document.loginform.password.value));
 	document.loginform.password.value = sha256(document.loginform.password.value);
+	// console.log("HASHED password value:", document.loginform.password.value);
 }
 
 function loginFormCheck()

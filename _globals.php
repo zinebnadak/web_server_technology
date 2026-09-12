@@ -5,6 +5,7 @@ $siteaddress = "www.umbrellacorp.top";
 // LÄS IN GLOBALA FUNKTIONER
 include("_f_readtextfile.php");
 include("_f_breadcrumimage.php"); // övning 4
+include("_f_logactivity.php"); // övning 12 , aktiviteslogg
 
 function sendmail($recipient, $subject, $message, $sender_name = "System", $sender_code = null)
 {

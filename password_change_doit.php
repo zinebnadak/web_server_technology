@@ -78,6 +78,8 @@ $update = mysqli_query($conn, "UPDATE users SET passwd='$new_password' WHERE emp
 
 if ($update) 
 {
+    // upgift 12 aktivitetslogg
+    logactivity($employeecode, date("Y-m-d"), date("H:i:s"), "Password changed", $employeecode, "User $employeecode changed their password via forgot-password flow", "Password");
     ?>
     <!DOCTYPE html>
     <html>
