@@ -1,6 +1,13 @@
+<?php
+session_start();
+$pagename = "index.php";
+$_SESSION['pagename'] = $pagename;
+?>
+
 <?php include("_security.php") ?>     
 <?php include("_config.php") ?>     
 <?php include("_globals.php") ?>     
+
 
 <?php 
 // ----- Locals: ------
@@ -33,9 +40,10 @@
     <!---- GRID ROW 4 START ------------------------------------------>
     <div class="grid-empty"></div>
     <div class="grid-main">
-        <?php include("_master_info-middle.php") ?>
+
+    <?php include("_master_info-middle.php") ?>
     </div>
-    <div class="grid-rightmenu">        
+        <div class="grid-rightmenu">        
         <?php include("_master_info-menu.php") ?>
     </div>
     <div class="grid-empty"></div>
@@ -50,3 +58,5 @@
 </div>
 
 <?php include("_master_bottom.php") ?>
+
+

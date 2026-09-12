@@ -1,3 +1,4 @@
+
 <div class="main">
 
 <?php
@@ -18,9 +19,16 @@ else
 {
     $target="text/index.html";
     $site="";
+}   // Letar upp text fil eller php fil
+echo "Navigation: <a href=\"http://". $siteaddress . "\" style=\"color: #45aeeb;\">". $siteaddress." </a> / " . $site ;
+if (file_exists($site . ".php") && $site != "") 
+{
+    include($site . ".php");
+} 
+else 
+{
+    readtextfile($target);
 }
-echo "Navigation: <a href=\"http://". $siteaddress . "\">". $siteaddress."</a> / " . $site ;
-readtextfile($target);
 ?>
   
 </div>

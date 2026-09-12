@@ -1,0 +1,8 @@
+Options -Indexes
+ErrorDocument 403 /index.php
+
+
+# <FilesMatch "\.(php|php5|phtml|sh|cgi|pl)$">
+#     Order allow,deny
+#     Deny from all
+# </FilesMatch>

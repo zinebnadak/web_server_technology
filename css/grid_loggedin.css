@@ -2,9 +2,9 @@ body
 {
     margin: 0px;
 }
-a:link { color:#ffffff; text-decoration: none; }
-a:visited { color:#ffffff; text-decoration: none; }
-a:hover { color:#000000; text-decoration: underline; }
+a:link { color:#f8fcfe; text-decoration: none; }
+a:visited { color:#eef0f4; text-decoration: none; }
+a:hover { color:darkred; text-decoration: underline; }
 
 .grid-container
 {
@@ -18,7 +18,7 @@ a:hover { color:#000000; text-decoration: underline; }
 .grid-header
 {
     grid-column: span 2;
-    background-color: black;
+    background-color: #3c0000;
     position: relative;   
 }    
 .header
@@ -37,14 +37,9 @@ a:hover { color:#000000; text-decoration: underline; }
 .grid-breadcrum
 {
     grid-column: span 4;
-    background-color: #8bb3c5;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    
-    /* hard coded background image background-image: url(../images/breadcrum01.jpg); */
-    
+    background-color: #000000;
+    /* background-image: url(../images/breadcrum01.jpg); */
+    position: relative;  
 }
 .breadcrumimage
 {
@@ -68,7 +63,7 @@ a:hover { color:#000000; text-decoration: underline; }
 .grid-topmenu
 {
     grid-column: span 4;
-    background-color: darkred;
+    background-color: #3c0000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,10 +119,11 @@ a:hover { color:#000000; text-decoration: underline; }
 /* ----------- EMPTY --------------------------------------------- */
 .grid-empty
 {
+    background-color: black;
 }
 .grid-emptyblack
 {
-    background-color: black;
+    background-color: #3c0000;
 }
 
 /* ----------- MAIN ---------------------------------------------- */
@@ -138,7 +134,7 @@ a:hover { color:#000000; text-decoration: underline; }
 }
 .grid-main
 {
-    background-color: white;
+    background-color: black;
 }
 .main
 {
@@ -146,11 +142,12 @@ a:hover { color:#000000; text-decoration: underline; }
     font-family: Arial;
     font-size: 12px;
     line-height: 1.5;
+    color: white;
 }
 /* ----------- RIGHT MENU ----------------------------------------- */
 .grid-rightmenu
 {
-    background-color: #8bb3c5;
+    background-color: #3c0000;
     min-height: 1.5;
 }
 .rightmenuitem
@@ -178,7 +175,7 @@ a:hover { color:#000000; text-decoration: underline; }
     padding-bottom: 0px;
     margin: 10px;
     font-size: 10px;
-    background-color: #a1d0e8;
+    background-color: #250000;
 }
 .button
 {
@@ -198,7 +195,7 @@ input[type=text], input[type=password]
 .grid-footer
 {
     grid-column: span 2;
-    background-color: black;
+    background-color: #3c0000;
 }
 .footer
 {
@@ -257,3 +254,4 @@ input[type=text], input[type=password]
     width: 260px;
     color: #333333;
 }
+
