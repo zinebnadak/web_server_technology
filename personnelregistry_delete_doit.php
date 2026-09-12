@@ -39,6 +39,11 @@ if (!isset($conn))
     }
 }
 
+// övning 12, aktivitetslogg inkludera globals 
+if (file_exists("_globals.php")) {
+    include_once("_globals.php");
+}
+
 if (!isset($conn)) 
 {
     die("<p style='color:red;'>Kunde inte ansluta till databasen.</p>");
@@ -81,6 +86,10 @@ if ($row = $result->fetch_assoc())
     if ($deleteStmt->execute()) 
     {
         $deleteStmt->close();
+
+        // övning 12, aktivitetslogg
+        logactivity($_SESSION['employeecode'] ?? 'SYSTEM', date("Y-m-d"), date("H:i:s"), "Employee deleted", $employeeCode, "Employee $employeeCode was deleted from personnel registry", "Employees");
+
         // Skicka tillbaka till listan med ett meddelande
         echo "<script>window.location.href='index.php?site=personnelregistry_read&msg=deleted';</script>";
         exit();

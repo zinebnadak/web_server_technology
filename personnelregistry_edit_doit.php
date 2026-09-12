@@ -17,6 +17,14 @@ if (!isset($conn))
     }
 }
 
+// övning 12 aktiviteslogg inkludera globals 
+
+if (file_exists("_globals.php")) 
+{
+    include_once("_globals.php");
+}
+
+
 if (!isset($conn)) 
 {
     die("<p style='color:red;'>Kunde inte ansluta till databasen.</p>");
@@ -159,6 +167,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     if ($stmt->execute()) 
     {
         $stmt->close();
+
+        // övning 12 aktiviteteslogg 
+        logactivity($_SESSION['employeecode'] ?? 'SYSTEM', date("Y-m-d"), date("H:i:s"), "Employee edited", $employeeCode, "Employee $name's information was updated", "Employees");
+        
         // Omdirigera tillbaka till den anställdes profilsida eller lista
         $redirectUrl = "index.php?site=personnelregistry_read_employee&code=" . urlencode($employeeCode);
 

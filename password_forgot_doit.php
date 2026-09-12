@@ -82,6 +82,10 @@ if ($success)
     
     // Anropar din uppdaterade sendmail-funktion från _globals.php
     sendmail($email, $subject, $message, "Umbrella Support", $employeecode);
+    
+    // uppgift 12, aktivitetslogg
+    logactivity($employeecode, date("Y-m-d"), date("H:i:s"), "Password reset", $employeecode, "User $employeecode requested a password reset, new password sent via email", "Password");
+
     ?>
     <!DOCTYPE html>
     <html>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+// var_dump($_SESSION); // TILLFÄLLIG DEBUG - ta bort sen
 
 // LOCALS
 $pagename = "login_doit.php";
@@ -51,6 +52,11 @@ if (!isset($_SESSION['pagename']) || $_SESSION['pagename'] !== $allowedpage)
 <?php
 $employeecode = $_POST["employeecode"];
 $password = $_POST["password"];
+// echo "DEBUG password från formuläret: " . $password . "<br>";
+// echo "DEBUG hash i databasen: ";
+// $debugcheck = mysqli_query($conn, "SELECT passwd FROM users WHERE employeecode='$employeecode'");
+// if ($debugrow = mysqli_fetch_assoc($debugcheck)) { echo $debugrow['passwd']; }
+// echo "<br>";
 $loggedin="no";
 $lockout="";
 
@@ -74,7 +80,8 @@ if($loggedin == "ok" && $lockout!="x")
     $logintimes = $logintimes +1;
 
     // Hämntar namn från employee
-    $employee_result = mysqli_query($conn, "SELECT name, securityAccessLevel FROM employee WHERE id='$id'");
+    // HÄR BYTTE JAG FRÅN $employee_result = mysqli_query($conn, "SELECT name, securityAccessLevel FROM employee WHERE id='$id'"); EFTERSOM INLOGGNING STRULA 
+    $employee_result = mysqli_query($conn, "SELECT name, securityAccessLevel FROM employee WHERE employeeCode='$employeecode'");
     $employee_name="";
     $securityAccessLevel="";
     if($employee_row = mysqli_fetch_assoc($employee_result))
@@ -97,6 +104,10 @@ if($loggedin == "ok" && $lockout!="x")
     
     // Uppdatera db med ny info (datum o antal)
     mysqli_query($conn, "UPDATE users SET logintimes='$logintimes', lastlogin=CURDATE(), lastlogintimes=CURTIME() WHERE id='$id'");
+    
+    // övning 12, aktivitekslogg
+    logactivity($employeecode, date("Y-m-d"), date("H:i:s"), "User logged in", $employeecode, "Login from " . $_SERVER['REMOTE_ADDR'], "Login/logout");
+    
     header("Location: index.php");
     exit();
 

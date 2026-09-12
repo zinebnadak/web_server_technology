@@ -20,8 +20,9 @@ if (strtoupper($userLevel) !== 'A')
     exit();
 }
 
-// Importera databasinställningar
+// Importera databasinställningar, och globals för uppg 12
 include_once("_config.php");
+include_once("_globals.php");
 
 // 3. Hantera POST-begäran och uppdatera databasen
 if ($_SERVER['REQUEST_METHOD'] === 'POST') 
@@ -76,6 +77,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         }
 
         // Skicka tillbaka till användarlistan efter sparning
+        // övning 12 aktivitetslogg
+        logactivity($_SESSION['employeecode'] ?? 'SYSTEM', date("Y-m-d"), date("H:i:s"), "User account edited", $finalCode, "User account for $finalCode was updated", "Users");
+
         header("Location: index.php?site=user_read&msg=updated");
         exit();
     }
