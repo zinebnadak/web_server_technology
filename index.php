@@ -1,3 +1,5 @@
+// Skapat två serveranvändare i viritual host, testar comitta 
+
 <?php
 session_start();
 $pagename = "index.php";
@@ -7,7 +9,6 @@ $_SESSION['pagename'] = $pagename;
 <?php include("_security.php") ?>     
 <?php include("_config.php") ?>     
 <?php include("_globals.php") ?>     
-
 
 <?php 
 // ----- Locals: ------
