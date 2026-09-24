@@ -1,4 +1,4 @@
-// Skapat två serveranvändare i viritual host, testar comitta 
+// Skapat två serveranvändare i viritual host, testar comitta .
 
 <?php
 session_start();
