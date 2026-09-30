@@ -166,6 +166,11 @@ a:hover { color:#000000; text-decoration: underline; }
     padding: 5pt;
     margin: 10px;
     border: 1px black solid;
+    
+    /* Nya egenskaper */
+    border-radius: 6px;                          /* Rundade hörn */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* Skugga */
+    cursor: pointer;
 }
 .rightmenuitem:hover 
 {
@@ -192,6 +197,12 @@ a:hover { color:#000000; text-decoration: underline; }
     border-radius: 6px;                          /* Rundade hörn */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);  /* Skugga: X-förskjutning, Y-förskjutning, suddighet, färg */
     cursor: pointer;  
+}
+.button:hover, 
+.rightmenuitem:hover 
+{
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.2s ease-in-out; /* Gör övergången mjuk */
 }
 input[type=text], input[type=password]
 {
