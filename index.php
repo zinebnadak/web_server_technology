@@ -40,11 +40,14 @@ $_SESSION['pagename'] = $pagename;
 
     <!---- GRID ROW 4 START ------------------------------------------>
     <div class="grid-empty"></div>
+    <div class="grid-leftimage">
+    <img src="images/Flowe.png" alt="Dekorativ bild">
+</div>
     <div class="grid-main">
-
-    <?php include("_master_info-middle.php") ?>
+        <?php include("_master_info-middle.php") ?>
     </div>
-        <div class="grid-rightmenu">        
+
+    <div class="grid-rightmenu">        
         <?php include("_master_info-menu.php") ?>
     </div>
     <div class="grid-empty"></div>

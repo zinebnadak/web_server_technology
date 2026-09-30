@@ -3,8 +3,8 @@ body
 {
     margin: 0px;
 }
-a:link { color:#ffffff; text-decoration: none; }
-a:visited { color:#ffffff; text-decoration: none; }
+a:link { color:#230a0a; text-decoration: none; }
+a:visited { color:#310909; text-decoration: none; }
 a:hover { color:#000000; text-decoration: underline; }
 
 .grid-container
@@ -19,7 +19,7 @@ a:hover { color:#000000; text-decoration: underline; }
 .grid-header
 {
     grid-column: span 2;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     position: relative;   
 }    
 .header
@@ -32,13 +32,13 @@ a:hover { color:#000000; text-decoration: underline; }
     font-family: Arial;
     font-size: 14px;
     font-weight: bold;
-    color: white;
+    color: rgb(31, 8, 8);
 }
 /* ------------ BREADCRUM ------------------------------------- */
 .grid-breadcrum
 {
     grid-column: span 4;
-    background-color: #8bb3c5;
+    background-color: #d5dbde;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -69,38 +69,62 @@ a:hover { color:#000000; text-decoration: underline; }
 .grid-topmenu
 {
     grid-column: span 4;
-    background-color: darkred;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: visible; /* Tillåter skuggor och dropdowns att sticka ut */
+    gap: 10px;                  /* Avstånd mellan knapparna */
+    height: 50px;
 }
 .topmenu
 {
 }
 .topmenuitem1, .topmenuitem2
 {
-    height: 50px;
+    height: 40px;
     text-align: center;
     font-family: Arial;
     font-size: 12px;
     font-weight: bold;
-    color: white;
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right   : 20px;
+   
+    padding: 10px 18px;
+    height: 36px;
     float: left;
+/* Nya och korrigerade egenskaper */
+    box-sizing: border-box;                     /* Låser totalthöjden till 40px */
+    position: relative;                         /* Gör att dropdown hamnar rätt */
+    border-radius: 8px;                         /* Rundade hörn */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4); /* Skugga */
+    margin: 0 4px;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.6), 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;  /* Vita knappar */
+    color: #000000;            /* Mörk text */
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.topmenuitem1 { background-color: #660000; }
-.topmenuitem1:hover { background-color: #330000; }
-.topmenuitem2 { background-color: #990000; }
-.topmenuitem2:hover { background-color: #660000; }
+
+.topmenuitem1 { background-color: #ffffff; }
+.topmenuitem1:hover { background-color: #e78989; }
+.topmenuitem2 { background-color: #f9f9f9; }
+.topmenuitem2:hover { background-color: #f56c6c; }
 
 .topmenudrop
 {
-    border: 1px solid black;
-	display: none;
-	position: absolute;
-	z-index: 2;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+    position: absolute;
+    top: 100%;                                  /* Placerar dropdown direkt under knappen */
+    left: 0;
+    z-index: 10;
+    background-color: darkred;                  /* Bakgrundsfärg bakom dropdown-objekten */
+    
+    /* Nya egenskaper för skugga och hörn */
+    border-radius: 6px;                         /* Rundade hörn på rutan */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);/* Tydlig skugga under dropdownen */
+    padding: 5px;                               /* Ger utrymme inuti dropdown-behållaren */
 }
 .topmenuitem1:hover .topmenudrop
 {
@@ -115,9 +139,14 @@ a:hover { color:#000000; text-decoration: underline; }
     font-size: 12px;
     font-weight: bold;
     color: white;
-    padding-top: 10px;
+    padding-top: 8px;
     padding-left: 20px;
     padding-right: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer; 
+    margin-bottom: 2px;
+
 }
 
 .topmenudropitem:hover { background-color: #330000; }
@@ -128,7 +157,7 @@ a:hover { color:#000000; text-decoration: underline; }
 }
 .grid-emptyblack
 {
-    background-color: black;
+    background-color: rgb(254, 253, 253);
 }
 
 /* ----------- MAIN ---------------------------------------------- */
@@ -151,7 +180,7 @@ a:hover { color:#000000; text-decoration: underline; }
 /* ----------- RIGHT MENU ----------------------------------------- */
 .grid-rightmenu
 {
-    background-color: #8bb3c5;
+    background-color: #fdefdc;
     min-height: 1.5;
 }
 .rightmenuitem
@@ -184,18 +213,20 @@ a:hover { color:#000000; text-decoration: underline; }
     padding-bottom: 0px;
     margin: 10px;
     font-size: 10px;
-    background-color: #a1d0e8;
+    background-color: #fffefe;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.6), 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px; 
 }
 .button
 {
     border: 1px solid black;
-    background-color: #d7ecff; 
+    background-color: #ffffff; 
     font-size: 10px;
     padding: 5px 10px; /* Ger lite mer utrymme inuti knappen */
     
     /* Nya egenskaper */
     border-radius: 6px;                          /* Rundade hörn */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);  /* Skugga: X-förskjutning, Y-förskjutning, suddighet, färg */
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.6), 0 2px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;  
 }
 .button:hover, 
@@ -216,14 +247,28 @@ input[type=text], input[type=password]
 /* ------------ FOOTER ---------------------------------------------- */
 .grid-footer
 {
-    grid-column: span 2;
-    background-color: black;
+    grid-column: 1 / -1;                                /* Sträcker ut footern över hela skärmens bredd */
+    background-image: url('/images/ormbunkesidor.webp');  /* Rättad stavning (images) och tillagd url() */
+    background-size: cover;                             /* Gör att bilden täcker hela ytan */
+    background-position: center;                        /* Centrerar bilden */
+    background-repeat: no-repeat;
 }
 .footer
 {
     width: 950px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    max-width: 95%;
+    margin: 0 auto;                                     /* Centrerar innehållet på skärmen */
+    display: flex;                                      /* Använder flexbox istället för float */
+    justify-content: space-between;                     /* Sprider ut delarna jämnt på raden */
+    align-items: center;                                /* Centrerar allt vertikalt */
+}
+.footerleft, 
+.footermiddle1, 
+.footermiddle2, 
+.footerright
+{
+    float: none;
+    margin: 0;
 }
 .footerleft
 {
@@ -235,7 +280,7 @@ input[type=text], input[type=password]
     width: 300px;
     font-family: Arial;
     font-size: 11px;
-    color: white;
+    color: rgb(40, 11, 11);
     float: left;
 }
 .footermiddle2
@@ -243,7 +288,7 @@ input[type=text], input[type=password]
     width: 250px;
     font-family: Arial;
     font-size: 9px;
-    color: white;
+    color: rgb(35, 6, 6);
     margin-bottom: 20px;
     float: left;
 }
@@ -276,4 +321,20 @@ input[type=text], input[type=password]
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     width: 260px;
     color: #333333;
+}
+.grid-leftimage
+{
+    grid-column: 1;
+    display: flex;
+    justify-content: center;   /* Centrerar bilden i spalten */
+    align-items: flex-start;   /* Placerar bilden i överkant */
+
+}
+
+.grid-leftimage img
+{
+    width: 100%;               /* Gör att bilden anpassar sig efter spalten */
+    max-width: 460px;          /* SÄTTER SKALAN: Justera detta värde om du vill ha den större/mindre */
+    height: auto;              /* Behåller bildens proportioner så den inte blir utdragen */
+    display: block;
 }

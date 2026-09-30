@@ -112,6 +112,11 @@ a:hover { color:darkred; text-decoration: underline; }
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
+        
+    /* Nya egenskaper */
+    border-radius: 6px;                          /* Rundade hörn */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);  /* Skugga: X-förskjutning, Y-förskjutning, suddighet, färg */
+    cursor: pointer;  
 }
 
 .topmenudropitem:hover { background-color: #330000; }
@@ -162,6 +167,7 @@ a:hover { color:darkred; text-decoration: underline; }
     padding: 5pt;
     margin: 10px;
     border: 1px black solid;
+
 }
 .rightmenuitem:hover 
 {
