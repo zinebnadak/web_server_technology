@@ -1,4 +1,3 @@
-
 body
 {
     margin: 0px;
@@ -180,7 +179,7 @@ a:hover { color:#000000; text-decoration: underline; }
 /* ----------- RIGHT MENU ----------------------------------------- */
 .grid-rightmenu
 {
-    background-color: #fdefdc;
+    background-color: #ffffff;
     min-height: 1.5;
 }
 .rightmenuitem
@@ -299,7 +298,8 @@ input[type=text], input[type=password]
     float: left;
 }
 /* Mörknar ner bakgrunden */
-.modal-overlay {
+.modal-overlay 
+{
     display: none; 
     position: fixed;
     top: 0;
@@ -322,15 +322,13 @@ input[type=text], input[type=password]
     width: 260px;
     color: #333333;
 }
-.grid-leftimage
-{
+.grid-leftimage {
     grid-column: 1;
-    display: flex;
-    justify-content: center;   /* Centrerar bilden i spalten */
-    align-items: flex-start;   /* Placerar bilden i överkant */
-
+    background-image: url('../images/Flowe.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
-
 .grid-leftimage img
 {
     width: 100%;               /* Gör att bilden anpassar sig efter spalten */

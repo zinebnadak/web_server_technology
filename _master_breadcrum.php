@@ -1,5 +1,5 @@
 <?php $breadcrumimage = randomBreadcrumImage(); ?>
-<div class="grid-breadcrum" style="background-image: url(images/<?= $breadcrumimage ?>);">
+<div class="grid-breadcrum" style="background-image: url('images/<?= $breadcrumimage ?>');">
 
     <div class="breadcrumimage">
         <img src="images/logo.png" alt="Umbrella Corporation" />

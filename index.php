@@ -40,16 +40,20 @@ $_SESSION['pagename'] = $pagename;
 
     <!---- GRID ROW 4 START ------------------------------------------>
     <div class="grid-empty"></div>
-    <div class="grid-leftimage">
-    <img src="images/Flowe.png" alt="Dekorativ bild">
-</div>
+<div class="grid-leftimage"></div>
     <div class="grid-main">
         <?php include("_master_info-middle.php") ?>
     </div>
 
-    <div class="grid-rightmenu">        
-        <?php include("_master_info-menu.php") ?>
-    </div>
+<div class="grid-rightmenu">        
+    <?php include("_master_info-menu.php") ?>
+
+    <!-- Visas ENBART när man inte är inloggad -->
+    <?php if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== 'ok'): ?>
+        <img src="images/Umbrella_fairForLife.png" alt="Dekorativ bild" style="margin: 0 auto; display: block;">
+        <img src="images/umbrella_worldFairTrade.png" alt="Dekorativ bild" style="margin: 0 auto; display: block;">
+    <?php endif; ?>
+</div>
     <div class="grid-empty"></div>
     <!---- GRID ROW 4 END --------------------------------------------->
 
